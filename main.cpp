@@ -2,16 +2,14 @@
 using namespace std;
 
 int main() {
-    int number;
-    cout << "Enter a number: ";
-    cin >> number;
+    int number1, number2;
+    cout << "Enter the first number: ";
+    cin >> number1;
+    cout << "Enter the second number: ";
+    cin >> number2;
 
-    if (number % 2 == 0) {
-        cout << "The number is even" << endl;
-    }
-    else {
-        cout << "The number is odd" << endl;
-    }
+    int mnshe = (number1 < number2) ? number1 : number2;
+    cout << "The smaller number is: " << mnshe << endl;
 
     return 0;
 }
