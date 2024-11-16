@@ -3,27 +3,25 @@ using namespace std;
 
 int main() {
     int number;
-    cout << "Enter a number: ";
+    cout << "Enter  number: ";
     cin >> number;
 
-    if (number < 100000 || number > 999999) {
+    if (number < 1000 || number > 9999) {
         cout << "Error" << endl;
     }
     else {
-        int first = number / 1000;
-        int second = number % 1000;
+        int d1 = (number / 1000) % 10;
+        int d2 = (number / 100) % 10;
+        int d3 = (number / 10) % 10;
+        int d4 = number % 10;
 
-        int sumF = (first / 100) + ((first / 10) % 10) + (first % 10);
-        int sumS = (second / 100) + ((second / 10) % 10) + (second % 10);
+        int swap = d2 * 1000 + d1 * 100 + d4 * 10 + d3;
 
-        if (sumF == sumS) {
-            cout << "The number is lucky" << endl;
-        }
-        else {
-            cout << "The number is not lucky" << endl;
-        }
+        cout << "The swapped number is: " << swap << endl;
     }
 
     return 0;
 }
+
+
 
