@@ -6,11 +6,14 @@ int main() {
     cout << "Enter a number: ";
     cin >> number;
 
-    if (number % 2 == 0) {
-        cout << "The number is even" << endl;
+    if (number > 0) {
+        cout << "The number is positive" << endl;
+    }
+    else if (number < 0) {
+        cout << "The number is negative" << endl;
     }
     else {
-        cout << "The number is odd" << endl;
+        cout << "The number is zer" << endl;
     }
 
     return 0;
